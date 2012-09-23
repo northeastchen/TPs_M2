@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE famille SYSTEM "../dtd/famille.dtd">
+<!--  famille-3.xml -->
+<famille responsable="resp3" nom="mammifères-marins" id="fm">
+  <animal id="a3" nom="Plaute" taille="3300" poids="3000" espece="baleine" />
+</famille>

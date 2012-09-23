@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  familleAvecXSD.xml -->
+<famille xmlns="http://www.istic.fr/schema/famille"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.istic.fr/schema/famille ../xsd/famille.xsd" 
+	xmlns:fami="http://www.istic.fr/schema/famille" 
+	responsable="resp2"
+	nom="mammifères-marins" 
+	id="fm"
+	>
+	<note>Famille en cours d'instalation</note>
+	<famille responsable="resp1" nom="cétacés" id="fc">
+		<note>On rajoute la note obligatoire</note>
+		<animal id="a1" nom="Flipper" date-naissance="2003-10-23" espece="dauphin" />
+		<animal id="b1" nom="Ecco"  date-naissance="1996-12-25" espece="dauphin"/>
+		<animal id="c1" nom="Oum" taille="295" poids="190" sexe="F" espece="dauphin"/>
+	</famille>
+	<famille responsable="resp4" nom="pinnipèdes" id="fp">
+		<note>Famille à compléter</note>
+		<animal id="a4" nom="Ben"  espece="phoque"/>
+		<animal id="b4" nom="Dali"  espece="otarie"/>
+		<animal id="c4" nom="Kim" taille="155" poids="80" sexe="M" espece="otarie"/>
+	</famille>
+</famille>

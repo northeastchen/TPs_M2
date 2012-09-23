@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- famille.xsd -->
+<xs:schema targetNamespace="http://www.istic.fr/schema/famille"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fami="http://www.istic.fr/schema/famille"
+	elementFormDefault="qualified">
+
+	<xs:element name="famille">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="note" type="xs:string" minOccurs="1"
+					maxOccurs="1" />
+				<xs:choice>
+					<xs:element ref="fami:famille" minOccurs="0" maxOccurs="10" />
+					<xs:element ref="fami:animal" maxOccurs="3" />
+				</xs:choice>
+			</xs:sequence>
+			<xs:attribute name="responsable" type="xs:NMTOKEN" use="required" />
+			<xs:attribute name="nom" type="fami:nomType" use="required" />
+			<xs:attribute name="id" type="xs:ID" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="animal">
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:ID" use="required" />
+			<xs:attribute name="nom" type="fami:nomType" />
+			<xs:attribute name="date-naissance" type="xs:date" />
+			<xs:attribute name="sexe">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="M|F|Inconnu" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="espece" type="xs:string" use="required" />
+			<xs:attribute name="taille" >
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0" />
+						<xs:maxInclusive value="3000" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="poids" >
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0" />
+						<xs:maxInclusive value="3000" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="nomType">
+		<xs:annotation>
+			<xs:documentation>Type qui représente un nom</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3" />
+			<xs:maxLength value="20" />
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

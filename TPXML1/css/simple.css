@@ -1,0 +1,44 @@
+/* 
+	Exemple de feuille de style CSS
+	simple.css pour famille.dtd
+*/
+famille {
+	display: block;
+	margin-left: 10%; margin-right: 10%;
+	margin-top: 1em; margin-bottom: 1em;
+	padding: 1em; border: 3px solid black;
+	color: #666666; background: #CCCCCC;
+	font-size: 14pt; 
+	font-family: sans-serif; font-weight: normal;	
+	text-align: left; 
+}
+animal {
+	display: block;
+	margin-top: 0.5em; margin-bottom: 0.5em;
+	padding:0.5em;
+	border: 1px solid gray;
+	color: #333333; background: #AAAAAA;
+}
+note:first-letter {
+ 	font-size:200%;  
+ }
+note  {
+	display: block; 
+	font-weight: bold; font-size:80%;
+	text-align: center;
+	text-transform: uppercase; /* capitalize ,  lowercase */
+	color: #337733; /* en vert */
+}
+famille:before { 
+	content:"Famille ";
+	text-decoration: underline;
+}
+/* observer les priorités des selecteurs */
+animal[sexe] { color: #AA2020; }  /* en rouge */
+animal[sexe="M"] { color: #2020EE; } /* en bleu */
+animal:after { content:" (auncune information détaillée) ";}
+
+[espece="phoque"]:before { content: "phoque";}
+[espece="otarie"]:before { content: "otarie";}
+[espece="dauphin"]:before { content: "dauphin";}
+[espece="baleine"]:before { content: "baleine";}

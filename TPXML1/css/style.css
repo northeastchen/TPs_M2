@@ -1,0 +1,43 @@
+/* feuille de style pour XHTML */
+/* style.css */
+body {
+  padding: 2em 1em 2em 30px;
+  margin: 0;
+  font-family: sans-serif;
+  font-style: normal; 
+  color: black; background: white;
+}
+:link { color: #00C; background: transparent; }
+:visited { color: #609; background: transparent; }
+a:active { color: #C00; background: transparent; }
+/* images sans bordure */
+a:link img, a:visited img { border-style: none; } 
+
+danger {
+	color: black;
+	border: solid;
+	border-color: black;
+	border-width: 2pt;
+	background-image: url('../img/bg-white.gif');
+}
+.attention {
+	color: black;
+	border: solid;
+	border-color: red;
+	border-width: 2pt;
+	background-image: url('../img/bg-red.gif');
+}
+.info {
+	color: black;
+	border: solid;
+	border-color: blue;
+	border-width: 2pt 2pt 2pt;
+	background-image: url('../img/bg-blue.gif');
+}
+h1 { text-align: center; }
+h2, h3, h4, h5, h6 { text-align: left; }
+h2 { text-transform: capitalize }	
+h1, h2, h3 { color: #009999; background: white; }
+h1 { font: 170%}
+h2 { font: 140% }
+h3 { font: 120% }

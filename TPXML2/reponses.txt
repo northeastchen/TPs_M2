@@ -1,0 +1,10 @@
+
+/recettes/rubrique[1]/recette[1]/nom/text()
+/recettes/rubrique[last()]/recette[last()]/nom/text()
+/recettes/rubrique/recette[ingrédients/item[contains(., 'ail')]]/nom/text()
+/recettes/rubrique/recette[ingrédients/item[contains(., 'ail') or contains(., 'oignon')]]/nom/text()
+/recettes/rubrique[ceiling(last() div 2)]/recette[ceiling(last() div 2)]
+/recettes/rubrique/recette[count(ingrédients/item) > 6]
+
+count(recettes/rubrique/recette)
+/recettes/rubrique[nom='Desserts']/recette

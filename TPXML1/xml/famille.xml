@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE famille SYSTEM "../dtd/famille.dtd">
+
+<famille id="famille" responsable="chef">
+	<animal espece="singe" id="s1"/>
+	
+</famille>

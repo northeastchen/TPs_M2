@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  aquarium.xsd -->
+<xs:schema targetNamespace="http://www.istic.fr/schema/aquarium"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:aqua="http://www.istic.fr/schema/aquarium" 
+	elementFormDefault="qualified" >
+<!--  XML schema : aquarium.xsd  -->
+	<xs:element name="aquarium">
+	  <xs:complexType>
+			<xs:sequence>
+				<xs:element name="INFO" minOccurs="0" maxOccurs="1" type="xs:string" />
+				<xs:element ref="aqua:famille" minOccurs="1" maxOccurs="10"/>
+			</xs:sequence>
+			<xs:attribute name="responsable" type="xs:NMTOKEN" use="required" />			
+			<xs:attribute name="nom" type="aqua:nomType" />	
+ 	  </xs:complexType>
+	</xs:element>
+	
+	<xs:element name="famille">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="aqua:famille" maxOccurs="10"/>
+				<xs:element ref="aqua:animal" maxOccurs="50"/>
+			</xs:choice>
+			<xs:attribute name="responsable" type="xs:NMTOKEN" use="required"/>			
+			<xs:attribute name="nom" type="aqua:nomType" />			
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="animal">
+	 <xs:complexType>
+		<xs:attribute name="id" type="xs:ID" use="required"/>		
+		<xs:attribute name="nom" type="aqua:nomType" />		
+		<xs:attribute name="date-naissance" type="xs:date" />	
+		<xs:attribute name="sexe">
+		  <xs:simpleType>
+		    <xs:restriction base="xs:string">
+			   <xs:pattern value="M|F"/>
+			</xs:restriction>	
+		  </xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="espece" type="xs:string" use="required"/>			
+		<xs:attribute name="taille" type="xs:integer" />			
+		<xs:attribute name="poids" type="xs:integer" />			
+	  </xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="nomType">		
+        <xs:annotation>
+			<xs:documentation>Type qui représente un nom</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+      		<xs:maxLength value="50"/>
+		</xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

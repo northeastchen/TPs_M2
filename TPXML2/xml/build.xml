@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TPXML2" default="apply-xsl" basedir=".">
+<!-- Production du XML avec un transformateur XSLT sous Eclipse  -->
+  <target name="apply-xsl">
+	<xslt in="recettes.xml" out="../html/page.html" style="../xsl/recettes2page.xsl">
+		<classpath location="../saxon9he.jar" />
+	</xslt >
+  </target>
+</project>

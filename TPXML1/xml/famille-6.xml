@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE famille SYSTEM "../dtd/famille.dtd">
+<!--  famille-6.xml -->
+<famille responsable="resp2" nom="mammifères-marins" id="fm">
+	<note>Aquarium en cours d'installation</note>
+	<famille responsable="resp1" nom="cétacés" id="fc">
+		<animal id="a1" nom="Flipper" date-naissance="2003-10-23" espece="dauphin" />
+		<animal id="b1" nom="Ecco"  date-naissance="1996-12-25" espece="dauphin"/>
+		<animal id="c1" nom="Oum" taille="295" poids="190" sexe="F" espece="dauphin"/>
+	</famille>
+	<famille responsable="resp4" nom="pinnipèdes" id="fp">
+		<animal id="a4" espece="phoque" nom="Ben"  />
+		<animal id="b4" espece="otarie" nom="Dali" />
+		<animal id="c4" taille="155" poids="80" sexe="M" espece="otarie" nom="Kim" />
+	</famille>
+</famille>

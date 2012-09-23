@@ -1,0 +1,24 @@
+<!--  aquarium.dtd -->
+<!ELEMENT aquarium (info?, famille+) >
+<!ELEMENT info (#PCDATA | note)* >
+<!ELEMENT note (#PCDATA) >
+<!ATTLIST aquarium 
+	responsable NMTOKEN #REQUIRED
+	nom CDATA #IMPLIED 
+	>
+<!ELEMENT famille (note?, (famille* | animal+)) >
+<!ATTLIST famille id ID #REQUIRED>
+<!ELEMENT animal EMPTY>
+<!ATTLIST animal id ID #REQUIRED>
+<!ATTLIST famille 
+	nom CDATA #IMPLIED
+	responsable NMTOKEN #REQUIRED 
+	>
+<!ATTLIST animal 
+	nom CDATA #IMPLIED
+	sexe  (F | M) 'F'
+    date-naissance CDATA #IMPLIED
+    poids CDATA #IMPLIED
+    taille CDATA #IMPLIED
+    espece  NMTOKEN #REQUIRED 
+    >

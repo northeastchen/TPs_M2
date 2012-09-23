@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aquarium SYSTEM "../dtd/aquarium.dtd" >
+<aquarium responsable="ChefAquarium" nom="super aquarium">
+	<info>
+		Une super info :
+		<note>c'est une super note ! </note>
+		Et là c'est la fin de l'info après la note.
+	</info>
+
+	<famille id="f1" responsable="chef1">
+		<animal espece="poisson" id="p1" nom="goujon" />
+		<animal espece="poisson" id="p2" nom="gardon" />
+	</famille>
+
+	<famille id="f2" responsable="chef2">
+		<animal espece="crustacés" id="c1" nom="crabe" />
+		<animal espece="crustacés" id="c2" nom="crevette" />
+		<animal espece="crustacés" id="c3" nom="langoustine" />
+	</famille>
+
+	<famille id="f3" responsable="chef3">
+		<animal espece="Mollusque" id="m1" nom="bigorneau" />
+		<animal espece="Mollusque" id="m2" nom="couteau" />
+		<animal espece="Mollusque" id="m3" nom="coque" />
+		<animal espece="Mollusque" id="m4" nom="huître" />
+	</famille>
+</aquarium>

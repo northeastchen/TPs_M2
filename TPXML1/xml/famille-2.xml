@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE famille SYSTEM "../dtd/famille.dtd">
+<!--  famille-2.xml -->
+<famille responsable="resp2" nom="mammifères-marins" id="fm">
+	<note>Famille en cours d'installation</note>
+	<famille responsable="resp1" nom="cétacés" id="fc">
+		<animal id="a1" nom="Flipper" date-naissance="2003-10-23" espece="dauphin" />
+		<animal id="b1" nom="Ecco"  date-naissance="1996-12-25" espece="dauphin"/>
+		<animal id="c1" nom="Oum" taille="295" poids="190" sexe="F" espece="dauphin"/>
+	</famille>
+</famille>
