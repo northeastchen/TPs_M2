@@ -1,1 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><result><F>f1</F><F>f2</F><F>f3</F><F>f4</F></result>
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+	<F>f2</F>
+	<F>f3</F>
+</result>
