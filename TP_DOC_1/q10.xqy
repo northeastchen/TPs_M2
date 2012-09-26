@@ -1,17 +1,17 @@
+import module namespace local = "http://localhost" at "module.xqy";
 <result>{	
-	for $v in distinct-values(
-		for $origines in //produit/Origine
-			
-		<origine ville="{}">
+	for $origine in distinct-values(
+		//produit/Origine
+	)return 
+		<origine ville="{$origine}">{
 			for $p in //produit
-			where $p/Origine=$Origines
+			where $p/Origine=$origine
 			return
-			<produit>{
-			 	$p/Nom_p
-				local:fournisseurParProduit($p/P)/Nom
-			} 
-			</produit>	
-	
-		
-	)return {$v}
+				<produit>{
+					<nom>{$p/Nom_p/text()}</nom>,
+					local:fournisseurParProduit2($p/P)
+				}</produit>	
+			
+		}</origine>
+}
 </result>
