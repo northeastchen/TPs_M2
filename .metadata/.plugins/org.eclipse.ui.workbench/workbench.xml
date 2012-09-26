@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="26" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="100" y="92">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="com.google.gdt.eclipse.suite.GDTPulldownToolbar" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1348675125409" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AccountImpl.java" partName="AccountImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/AccountImpl.java" title="AccountImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/AccountImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/AccountImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="311"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ModeratorImplTest.java" partName="ModeratorImplTest.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/test/ModeratorImplTest.java" title="ModeratorImplTest.java" tooltip="fr.univ-rennes1.auction4student/src/test/ModeratorImplTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/test/ModeratorImplTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="456" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserImplTest.java" partName="UserImplTest.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/test/UserImplTest.java" title="UserImplTest.java" tooltip="fr.univ-rennes1.auction4student/src/test/UserImplTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/test/UserImplTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="333" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserImpl.java" partName="UserImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/UserImpl.java" title="UserImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/UserImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/UserImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="832" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessageImpl.java" partName="MessageImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/MessageImpl.java" title="MessageImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/MessageImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/MessageImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonImpl.java" partName="PersonImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/PersonImpl.java" title="PersonImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/PersonImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/PersonImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="807" selectionTopPixel="431"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServerImpl.java" partName="ServerImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/ServerImpl.java" title="ServerImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/ServerImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/ServerImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ModeratorImpl.java" partName="ModeratorImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/ModeratorImpl.java" title="ModeratorImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/ModeratorImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/ModeratorImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BidImpl.java" partName="BidImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/BidImpl.java" title="BidImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/BidImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/BidImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="212" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReserveAuctionImpl.java" partName="ReserveAuctionImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/ReserveAuctionImpl.java" title="ReserveAuctionImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/ReserveAuctionImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/ReserveAuctionImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="11"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AuctionFactory.java" partName="AuctionFactory.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/AuctionFactory.java" title="AuctionFactory.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/AuctionFactory.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/AuctionFactory.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AuctionImpl.java" partName="AuctionImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/AuctionImpl.java" title="AuctionImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/AuctionImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/AuctionImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BulletinBoardImpl.java" partName="BulletinBoardImpl.java" path="D:/eclipse/workspace/TPs_M2/fr.univ-rennes1.auction4student/src/auction/impl/BulletinBoardImpl.java" title="BulletinBoardImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/BulletinBoardImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fr.univ-rennes1.auction4student/src/auction/impl/BulletinBoardImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="960" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors (4 items)"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="816"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1348675125409">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="com.google.gdt.eclipse.managedapis.ui.ManagedApiContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.google.gdt.eclipse.core.actionSet"/>
+<alwaysOnActionSet id="adt.actionSet.wizards"/>
+<alwaysOnActionSet id="adt.actionSet.refactorings"/>
+<alwaysOnActionSet id="adt.actionSet.avdManager"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.wb.core.StructureView"/>
+<show_view_action id="org.eclipse.wb.core.PaletteView"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="com.android.ide.eclipse.adt.project.NewProjectWizard"/>
+<new_wizard_action id="com.android.ide.eclipse.editors.wizards.NewXmlFileWizard"/>
+<new_wizard_action id="com.google.gdt.eclipse.suite.wizards.newProjectWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newEntryPointWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newHostPageWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newModuleWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newClientBundleWizard"/>
+<new_wizard_action id="com.google.gwt.eclipse.core.newUiBinderWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
+<perspective_action id="com.android.ide.eclipse.hierarchyviewer.PixelPerfectPespective"/>
+<perspective_action id="com.android.ide.eclipse.hierarchyviewer.TreeViewPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<page content="org.eclipse.wb.core.StructureView" label="LabelNotFound"/>
+<page content="org.eclipse.wb.core.PaletteView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4848ab42" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.7496136" ratioLeft="485" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="com.google.gwt.eclipse.DevModeView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/AccountImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/test/ModeratorImplTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/test/UserImplTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/MessageImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/PersonImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/ServerImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/ModeratorImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/BidImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/ReserveAuctionImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/test/PersonImplTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/AuctionFactory.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/UserImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/AuctionImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/fr.univ-rennes1.auction4student/src/auction/impl/BulletinBoardImpl.java"/>
+</editors>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AccountImpl.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ModeratorImplTest.java" index="1">
+<position info="not_deleted" x="321" y="0"/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ServerImpl.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ModeratorImpl.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MessageImpl.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="UserImplTest.java" index="2">
+<position info="not_deleted" x="333" y="0"/>
+</item>
+<item historyLabel="ServerImpl.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BidImpl.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ReserveAuctionImpl.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MessageImpl.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ModeratorImpl.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="PersonImplTest.java" index="9">
+<position/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="PersonImplTest.java" index="9">
+<position info="not_deleted" x="344" y="0"/>
+</item>
+<item historyLabel="ModeratorImpl.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ModeratorImplTest.java" index="1">
+<position info="not_deleted" x="143" y="24"/>
+</item>
+<item historyLabel="PersonImplTest.java" index="9">
+<position info="not_deleted" x="191" y="0"/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="PersonImplTest.java" index="9">
+<position info="not_deleted" x="191" y="0"/>
+</item>
+<item historyLabel="PersonImplTest.java" index="9">
+<position/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="ModeratorImplTest.java" index="1">
+<position info="not_deleted" x="257" y="58"/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="PersonImplTest.java" index="9">
+<position info="not_deleted" x="347" y="0"/>
+</item>
+<item historyLabel="PersonImplTest.java" index="9">
+<position info="not_deleted" x="263" y="0"/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="824" y="0"/>
+</item>
+<item historyLabel="ModeratorImplTest.java" index="1">
+<position info="not_deleted" x="614" y="0"/>
+</item>
+<item historyLabel="AccountImpl.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AuctionFactory.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AccountImpl.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ServerImpl.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PersonImpl.java" index="4">
+<position info="not_deleted" x="807" y="0"/>
+</item>
+<item historyLabel="ModeratorImplTest.java" index="1">
+<position info="not_deleted" x="456" y="0"/>
+</item>
+<item historyLabel="UserImpl.java" index="11">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="BidImpl.java" index="7">
+<position info="not_deleted" x="212" y="0"/>
+</item>
+<item historyLabel="AuctionImpl.java" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ServerImpl.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AccountImpl.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BidImpl.java" index="7">
+<position info="not_deleted" x="212" y="0"/>
+</item>
+<item historyLabel="BulletinBoardImpl.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MessageImpl.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BulletinBoardImpl.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MessageImpl.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BulletinBoardImpl.java" index="13">
+<position info="not_deleted" x="960" y="0"/>
+</item>
+<item active="true" historyLabel="MessageImpl.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="com.google.gdt.eclipse.login.status.trim"/>
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BulletinBoardImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/BulletinBoardImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/BulletinBoardImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AuctionImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/AuctionImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/AuctionImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AuctionFactory.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/AuctionFactory.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/AuctionFactory.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonImplTest.java" tooltip="fr.univ-rennes1.auction4student/src/test/PersonImplTest.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/test/PersonImplTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReserveAuctionImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/ReserveAuctionImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/ReserveAuctionImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BidImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/BidImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/BidImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ModeratorImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/ModeratorImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/ModeratorImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServerImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/ServerImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/ServerImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/PersonImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/PersonImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessageImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/MessageImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/MessageImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/UserImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/UserImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserImplTest.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/UserImplTest.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/UserImplTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ModeratorImplTest.java" tooltip="fr.univ-rennes1.auction4student/src/test/ModeratorImplTest.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/test/ModeratorImplTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AccountImpl.java" tooltip="fr.univ-rennes1.auction4student/src/auction/impl/AccountImpl.java">
+<persistable path="/fr.univ-rennes1.auction4student/src/auction/impl/AccountImpl.java"/>
+</file>
+</mruList>
+</workbench>
