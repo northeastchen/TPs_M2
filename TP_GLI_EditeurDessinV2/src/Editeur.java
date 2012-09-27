@@ -2,7 +2,11 @@ import java.awt.BorderLayout;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
 
 
 public class Editeur extends JFrame {
@@ -11,6 +15,9 @@ public class Editeur extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private JRadioButton radioRect;
+	private JRadioButton radioEll;
 	
 	public Editeur() {
 		
@@ -46,7 +53,15 @@ public class Editeur extends JFrame {
 		setLayout(new BorderLayout());
 		
 		add(new ZoneDeDessin(), BorderLayout.CENTER);
-		
+		JPanel barreBouton=new JPanel();
+		radioRect = new JRadioButton("Rectangle");
+		radioEll = new JRadioButton("Ellipse");
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(radioRect);
+		bg.add(radioEll);
+		barreBouton.add(radioRect);
+		barreBouton.add(radioEll);
+		add(barreBouton,BorderLayout.NORTH);
 		
 	}
 	
