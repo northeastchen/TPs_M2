@@ -1,0 +1,15 @@
+!SESSION 2012-09-26 17:58:07.004 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2012-09-26 17:58:48.937
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.5.4.r37v201109211906
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2012-09-26 17:58:49.987
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.4.0.r37v201109211906
+
+!ENTRY org.eclipse.ui 4 4 2012-09-26 18:03:08.241
+!MESSAGE Invalid preference page path: XML Syntax
