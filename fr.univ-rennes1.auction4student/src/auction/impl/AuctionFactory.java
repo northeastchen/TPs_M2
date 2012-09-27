@@ -17,6 +17,4 @@ public class AuctionFactory {
 	public static AuctionFactory getEInstance() {
 		return eInstance;
 	}
-	
-
 }
