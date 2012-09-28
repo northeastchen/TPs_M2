@@ -66,7 +66,7 @@ public class ZoneDeDessin extends JPanel {
 	public void beginRect(Point p) {
 		x1 = x2 = p.x;
 		y1 = y2 = p.y;
-		currentD = new Dessin(x1, y1);
+		currentD = new Rectangle(x1, y1);
 		add(currentD);
 	}
 

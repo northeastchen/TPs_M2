@@ -7,7 +7,7 @@ import java.awt.event.MouseMotionListener;
 import javax.swing.JPanel;
 
 
-public class Dessin extends JPanel {
+public abstract class Dessin extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -56,8 +56,6 @@ public class Dessin extends JPanel {
 			public void mouseDragged(MouseEvent e) {
 				dx = e.getX() - newx1;
 				dy = e.getY() - newy1;
-				//x1 = e.getX();
-				//y1 = e.getY();
 				moveDessin();
 			}
 		});
