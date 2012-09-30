@@ -1,7 +1,8 @@
 package test;
 
-import auction.impl.UserImpl;
 import junit.framework.TestCase;
+import auction.Account;
+import auction.impl.UserImpl;
 
 public class UserImplTest extends TestCase {
 
@@ -35,5 +36,21 @@ public class UserImplTest extends TestCase {
 	public void testGetPassword() {
 		assertEquals("Test de getPassword()", "password", u.getPassword());
 	}
+	
+	public void testGetAccount(){
+		assertTrue("Test de getAccount()", u.getAccount() instanceof Account);
+	}
+	
+	
+	//A revoir 
+	public void testGetJoinedAuctions(){
+		assertEquals("Test de getAccount()", u.getJoinedAuctions().size(),0 );
+	}
+	
+	public void testGetBids(){
+		assertEquals("Test de getAccount()", u.getBids().size(),0 );
+	}
+	
+	
 
 }
