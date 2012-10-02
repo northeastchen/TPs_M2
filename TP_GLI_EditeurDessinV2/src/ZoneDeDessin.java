@@ -18,6 +18,9 @@ public class ZoneDeDessin extends JPanel {
 	private int x2;
 	private int y2;
 	
+	private CreatorDessin cd;
+	
+	private Color color;
 
 	public ZoneDeDessin() {
 
@@ -31,7 +34,7 @@ public class ZoneDeDessin extends JPanel {
 
 			@Override
 			public void mousePressed(MouseEvent e) {
-				beginRect(e.getPoint());
+				beginDessin(e.getPoint());
 			}
 
 			@Override
@@ -55,7 +58,7 @@ public class ZoneDeDessin extends JPanel {
 
 			@Override
 			public void mouseDragged(MouseEvent e) {
-				moveRect(e.getPoint());
+				drawDessin(e.getPoint());
 			}
 		});
 		
@@ -63,14 +66,16 @@ public class ZoneDeDessin extends JPanel {
 
 	}
 
-	public void beginRect(Point p) {
+	public void beginDessin(Point p) {
 		x1 = x2 = p.x;
 		y1 = y2 = p.y;
-		currentD = new Rectangle(x1, y1);
+		currentD = cd.creerDessin();
+		currentD.setColor(color);
 		add(currentD);
+		currentD.setForeground(getForeground());
 	}
 
-	public void moveRect(Point p) {
+	public void drawDessin(Point p) {
 		x2 = p.x;
 		y2 = p.y;
 		currentD.setBounds(Math.min(x2, x1),
@@ -78,6 +83,14 @@ public class ZoneDeDessin extends JPanel {
 				Math.abs(x2 - x1),
 				Math.abs(y2 - y1));
 		repaint();
+	}
+	
+	public void setCD(CreatorDessin cd) {
+		this.cd = cd;
+	}
+
+	public void setColor(Color c) {
+		this.color = c;
 	}
 
 	@Override

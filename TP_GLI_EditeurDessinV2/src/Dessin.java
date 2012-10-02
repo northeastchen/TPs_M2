@@ -18,9 +18,11 @@ public abstract class Dessin extends JPanel {
 	private int dx;
 	private int dy;
 	
-	public Dessin(int x, int y) {
+	private Color color;
+	
+	public Dessin() {
 		
-		setBackground(Color.YELLOW);
+		setOpaque(false);
 		addMouseListener(new MouseListener() {
 
 			@Override
@@ -54,11 +56,18 @@ public abstract class Dessin extends JPanel {
 
 			@Override
 			public void mouseDragged(MouseEvent e) {
-				dx = e.getX() - newx1;
-				dy = e.getY() - newy1;
-				moveDessin();
+
+				if(contains(e.getX(), e.getY())) {
+					dx = e.getX() - newx1;
+					dy = e.getY() - newy1;
+					moveDessin();
+				}
 			}
 		});
+	}
+	
+	public void setColor(Color c) {
+		this.color = c;
 	}
 	
 	public void moveDessin() {
@@ -69,7 +78,11 @@ public abstract class Dessin extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.setColor(Color.YELLOW);
-		g.fillRect(0,0,getWidth()-1,getHeight()-1);
+		g.setColor(color);
 	}
+	
+//	@Override
+//	public boolean contains(int x, int y) {
+//		return super.contains(x, y);
+//	}
 }
