@@ -6,6 +6,7 @@ import auction.Bid;
 import auction.User;
 import auction.impl.AuctionImpl;
 import auction.impl.ReserveAuctionImpl;
+import auction.impl.ServerImpl;
 import auction.impl.UserImpl;
 import auction.states.Cancelled;
 import auction.states.Closed;
@@ -16,17 +17,27 @@ import junit.framework.TestCase;
 public class AuctionImplTest extends TestCase {
 
 	private User seller;
+	private User sellerTest;
 	private Auction au;
+	private Auction auTest;
 	
 	protected void setUp() throws Exception {
 		super.setUp();
 		seller=new UserImpl("Jean","Test","email","password", "address");
+		sellerTest=new UserImpl("name","Test","email","password", "address");
 		au=new AuctionImpl(seller,"Auction 1","Description de l'auction",15, 30, 2);
 		
 	}
 
 	public void testAuctionImpl() {
-		fail("Not yet implemented");
+		auTest=new AuctionImpl(sellerTest,"Auction test","Description de l'auction de test",15, 30, 2);
+		assertEquals(sellerTest, auTest.getSeller());
+		assertEquals("Auction test", auTest.getName());
+		assertEquals("Description de l'auction de test", auTest.getDescription());
+		assertEquals(15, auTest.getStartDate());
+		assertEquals(30, auTest.getEndDate());
+		assertEquals(2, auTest.getMinimumBid());
+		assertEquals(auTest, ServerImpl.instance.getAuctions().get(auTest.getName()));
 	}
 
 	public void testCancelAuction() {

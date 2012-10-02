@@ -15,6 +15,7 @@ public class BidImpl implements Bid {
 	public BidImpl(UserImpl user, Auction auction, int amount){
 		this.user = user;
 		this.amount = amount;
+		this.auction = auction;
 		auction.getBids().add(this);
 		user.getBids().add(this);
 	}

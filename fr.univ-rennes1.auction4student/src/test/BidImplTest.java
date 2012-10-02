@@ -33,9 +33,9 @@ public class BidImplTest extends TestCase {
 	}
 	
 	public void testBidImpl() {
-		bid2 = new BidImpl(user, mockAuction, 0);
+		bid2 = new BidImpl(user, mockAuction, 12);
 		assertNotNull(bid2);
-		assertEquals(0, bid2.getAmount());
+		assertEquals(12, bid2.getAmount());
 		assertEquals(user, bid2.getUser());
 		assertEquals(mockAuction, bid2.getAuction());
 	}

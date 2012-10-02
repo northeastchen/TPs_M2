@@ -12,6 +12,7 @@ import auction.User;
 import auction.impl.AccountImpl;
 import auction.impl.AuctionImpl;
 import auction.impl.BidImpl;
+import auction.impl.MessageImpl;
 import auction.impl.UserImpl;
 
 public class AccountImplTest extends TestCase {
@@ -36,13 +37,23 @@ public class AccountImplTest extends TestCase {
 		testA = new AccountImpl(u1);
 		
 		mockau1=EasyMock.createMock(AuctionImpl.class);
-		mockau2=EasyMock.createMock(AuctionImpl.class);
+		List<BidImpl> bids = new java.util.ArrayList<BidImpl>();
+		EasyMock.expect(mockau1.getBids()).andReturn(bids).anyTimes();
 		
+		mockau2=EasyMock.createMock(AuctionImpl.class);
+		List<BidImpl> bids2 = new java.util.ArrayList<BidImpl>();
+		EasyMock.expect(mockau2.getBids()).andReturn(bids2).anyTimes();
+
+		EasyMock.expect(mockau1.getMaxBid()).andReturn(!bids.isEmpty() ? bids.get(bids.size()-1) : null).anyTimes();
+		
+		EasyMock.replay(mockau1);
+		EasyMock.replay(mockau2);
 		
 		bid1=new BidImpl(u1, mockau1, 20);
 		bid2=new BidImpl(u1, mockau2, 10);
 		bid3=new BidImpl(u2, mockau2, 40);
-		//EasyMock.expect(mockau1.getMaxBid()).andReturn(messages).anyTimes(); 
+		
+		 
 		
 		l_auction=new ArrayList<Auction>();
 		
@@ -67,15 +78,10 @@ public class AccountImplTest extends TestCase {
 	}
 
 	public void testGetFreeCredit1() {
-		//passe 4 fois dans la boucle 
-		
-		l_auction.add(mockau1);
-		l_auction.add(mockau2);
-		
-		
+		System.out.println(testA.getFreeCredit());
 	}
 
-	public void testGetCredits() {
+	public void testGetCredits() {	
 		fail("Not yet implemented");
 	}
 
