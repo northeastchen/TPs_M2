@@ -43,11 +43,11 @@ public class AuctionImplTest extends TestCase {
 	}
 
 	public void testCancelAuction() {
-		fail("Not yet implemented");
+		// TODO cf State
 	}
 
 	public void testClose() {
-		fail("Not yet implemented");
+		// TODO cf State
 	}
 
 	public void testGetBidHistory() {
