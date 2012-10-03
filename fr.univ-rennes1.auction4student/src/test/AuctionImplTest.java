@@ -1,11 +1,14 @@
 package test;
 
+import java.util.List;
+
 import junit.framework.TestCase;
 import auction.Auction;
 import auction.AuctionState;
 import auction.Moderator;
 import auction.User;
 import auction.impl.AuctionImpl;
+import auction.impl.BidImpl;
 import auction.impl.ModeratorImpl;
 import auction.impl.ServerImpl;
 import auction.impl.UserImpl;
@@ -21,6 +24,8 @@ public class AuctionImplTest extends TestCase {
 	private Moderator moderatorTest;
 	private Auction au;
 	private Auction auTest;
+	private List<BidImpl> bids;
+	private UserImpl ui;
 	
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -28,7 +33,8 @@ public class AuctionImplTest extends TestCase {
 		sellerTest=new UserImpl("name","Test","email","password", "address");
 		moderatorTest = new ModeratorImpl("mode", "rator", "mail", "pass", "here");
 		au=new AuctionImpl(seller,"Auction 1","Description de l'auction",15, 30, 2);
-		
+		bids = new java.util.ArrayList<BidImpl>();
+		ui = new UserImpl("User","Impl","email","password", "address");
 	}
 
 	public void testAuctionImpl() {
@@ -54,8 +60,20 @@ public class AuctionImplTest extends TestCase {
 		fail("Not yet implemented");
 	}
 
-	public void testGetBids() {
-		fail("Not yet implemented");
+	/*
+	 * test getBids() avec bids vide
+	 */
+	public void testGetBidsEmpty() {
+		assertEquals(bids, au.getBids());
+	}
+	
+	/*
+	 * test getBids() avec bids non vide
+	 */
+	public void testGetBidsNotEmpty() {
+		BidImpl b = new BidImpl(ui, au, 50);
+		bids.add(b);
+		assertEquals(bids, au.getBids());
 	}
 
 	public void testGetBulletinBoard() {
@@ -166,7 +184,7 @@ public class AuctionImplTest extends TestCase {
 	}
 
 	/*
-	 * test 1ère condition : auction.getSeller()!=person && !(person instanceof Moderator)
+	 * test avec Pending.setStartDate 1ère condition : auction.getSeller()!=person && !(person instanceof Moderator)
 	 */
 	public void testSetStartDPending1() {
 		au.setState(Pending.instance);
@@ -174,44 +192,49 @@ public class AuctionImplTest extends TestCase {
 	}
 	
 	/*
-	 * test 2nd value<=0
+	 * test avec Pending.setStartDate 2nde condition : value<=ServerImpl.instance.getTick()
 	 */
 	public void testSetStartDPending2() {
 		au.setState(Pending.instance);
-		assertEquals("ERROR: the minimum bid must be greater than 0", au.setStartD(sellerTest, 0));
-		assertEquals("ERROR: the minimum bid must be greater than 0", au.setStartD(moderatorTest, -2));
+		assertEquals("ERROR: the start date must be greater than the current time", au.setStartD(seller, 0));
 	}
 	
+	/*
+	 * test avec Pending.setStartDate 3ème condition : value>=auction.getEndDate()
+	 */
 	public void testSetStartDPending3() {
 		au.setState(Pending.instance);
-		assertEquals("ERROR: you cannot modify this auction", au.setStartD(seller, 10));
+		assertEquals("ERROR: the start date must be less than the end date", au.setStartD(seller, au.getEndDate()+1));
 	}
 	
+	/*
+	 * test avec Pending.setStartDate aucune des condition
+	 */
 	public void testSetStartDPending4() {
 		au.setState(Pending.instance);
-		assertEquals("ERROR: auction cancelled", au.setStartD(seller, 10));
+		assertEquals("OK", au.setStartD(seller, 12));
+		assertEquals(12, au.getStartDate());
 	}
 	
-	public void testSetStartDPending5() {
-		au.setState(Pending.instance);
-		assertEquals("ERROR: auction cancelled", au.setStartD(seller, 10));
-	}
-	
-	public void testSetStartDPending6() {
-		au.setState(Pending.instance);
-		assertEquals("ERROR: auction cancelled", au.setStartD(seller, 10));
-	}
-	
+	/*
+	 * test avec Cancelled.setStartDate
+	 */
 	public void testSetStartDCancelled() {
 		au.setState(Cancelled.instance);
 		assertEquals("ERROR: auction cancelled", au.setStartD(seller, 10));
 	}
 	
+	/*
+	 * test avec Closed.setStartDate
+	 */
 	public void testSetStartDClosed() {
 		au.setState(Closed.instance);
 		assertEquals("ERROR: auction closed", au.setStartD(seller, 10));
 	}
 	
+	/*
+	 * test avec Open.setStartDate
+	 */
 	public void testSetStartDOpen() {
 		au.setState(Open.instance);
 		assertEquals("ERROR: auctions is open", au.setStartD(seller, 10));

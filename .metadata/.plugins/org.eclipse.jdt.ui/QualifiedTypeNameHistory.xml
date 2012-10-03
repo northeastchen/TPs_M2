@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="auction.impl.PersonImpl"/>
-<fullyQualifiedTypeName name="auction.impl.ModeratorImpl"/>
+<fullyQualifiedTypeName name="auction.impl.ServerImpl"/>
+<fullyQualifiedTypeName name="auction.impl.BidImpl"/>
 </qualifiedTypeNameHistroy>
