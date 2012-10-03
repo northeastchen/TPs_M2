@@ -13,6 +13,7 @@ import auction.impl.AccountImpl;
 import auction.impl.AuctionImpl;
 import auction.impl.BidImpl;
 import auction.impl.MessageImpl;
+import auction.impl.ServerImpl;
 import auction.impl.UserImpl;
 
 public class AccountImplTest extends TestCase {
@@ -45,6 +46,9 @@ public class AccountImplTest extends TestCase {
 		EasyMock.expect(mockau2.getBids()).andReturn(bids2).anyTimes();
 
 		EasyMock.expect(mockau1.getMaxBid()).andReturn(!bids.isEmpty() ? bids.get(bids.size()-1) : null).anyTimes();
+		
+		//ServerImpl.instance.getAuctions().put(name,this);
+		
 		
 		EasyMock.replay(mockau1);
 		EasyMock.replay(mockau2);

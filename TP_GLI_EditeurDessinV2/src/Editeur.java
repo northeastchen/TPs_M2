@@ -7,6 +7,7 @@ import java.awt.event.WindowListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
+import javax.swing.JColorChooser;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
@@ -27,12 +28,14 @@ public class Editeur extends JFrame {
 	private JRadioButton rouge;
 	private JRadioButton vert;
 	private JRadioButton bleu;
-	private JRadioButton jaune;
+	private JRadioButton choixCouleur;
 	
 	private CreatorDessin cr = new CreatorRectangle();
 	private CreatorDessin ce = new CreatorEllipse();
 	private CreatorDessin cre = new CreatorRectangleEmpty();
 	private CreatorDessin cee = new CreatorEllipseEmpty();
+	
+	private Apercu apercu;
 	
 	private ZoneDeDessin zdd;
 	
@@ -111,8 +114,6 @@ public class Editeur extends JFrame {
 		bgf.add(radioRectEmpty);
 		bgf.add(radioEllEmpty);
 
-		radioRect.doClick();
-		
 		barreFormes.add(radioRect);
 		barreFormes.add(radioEll);
 		barreFormes.add(radioRectEmpty);
@@ -128,14 +129,14 @@ public class Editeur extends JFrame {
 		rouge.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				zdd.setColor(Color.RED);
+				zdd.setForeground(Color.RED);
 			}
 		});
 		vert = new JRadioButton("Vert");
 		vert.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				zdd.setColor(Color.GREEN);
+				zdd.setForeground(Color.GREEN);
 			}
 		});
 
@@ -143,29 +144,39 @@ public class Editeur extends JFrame {
 		bleu.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				zdd.setColor(Color.BLUE);
+				zdd.setForeground(Color.BLUE);
 			}
 		});
-		jaune = new JRadioButton("Jaune");
-		jaune.addActionListener(new ActionListener() {
+		choixCouleur = new JRadioButton("...");
+		choixCouleur.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				zdd.setColor(Color.YELLOW);
+				Color col = JColorChooser.showDialog(zdd.getParent(), "Choix de couleur", zdd.getForeground());
+				zdd.setForeground(col);
 			}
 		});
+		
 		ButtonGroup bgc = new ButtonGroup();
 		bgc.add(rouge);
 		bgc.add(vert);
 		bgc.add(bleu);
-		bgc.add(jaune);
+		bgc.add(choixCouleur);
 
-		rouge.doClick();
+		
 		
 		barreCouleurs.add(rouge);
 		barreCouleurs.add(vert);
 		barreCouleurs.add(bleu);
-		barreCouleurs.add(jaune);
+		barreCouleurs.add(choixCouleur);
 		
+		apercu=new Apercu();
+		zdd.addPropertyChangeListener("foreground", apercu);
+		zdd.addPropertyChangeListener("forme", apercu);
+
+		radioRect.doClick();
+		rouge.doClick();
+		
+		barreCouleurs.add(apercu);
 		add(barreCouleurs,BorderLayout.EAST);
 		
 	}
