@@ -5,6 +5,8 @@ import java.util.List;
 import junit.framework.TestCase;
 import auction.Auction;
 import auction.AuctionState;
+import auction.Bid;
+import auction.BulletinBoard;
 import auction.Moderator;
 import auction.User;
 import auction.impl.AuctionImpl;
@@ -48,41 +50,164 @@ public class AuctionImplTest extends TestCase {
 		assertEquals(auTest, ServerImpl.instance.getAuctions().get(auTest.getName()));
 	}
 
-	public void testCancelAuction() {
-		// TODO cf State
-	}
+	 /*
+     * Test de CancelAuction
+     */
+   
+    /*
+     * Test de (person instanceof Moderator)
+     */
+    public void testCancelAuctionPending1() {
+            au.setState(Pending.instance);
+            assertEquals("OK",au.cancelAuction(moderatorTest));
+            assertEquals(Cancelled.instance,au.getState());
+    }
+   
+    /*
+     * Test de personn==auction.getSeller()
+     */
+    public void testCancelAuctionPending2() {
+            au.setState(Pending.instance);
+            assertEquals("OK",au.cancelAuction(seller));
+    }
+   
+    public void testCancelAuctionPending3() {
+            au.setState(Pending.instance);
+            assertEquals("ERROR: you cannot cancel this auction",au.cancelAuction(sellerTest));
+    }
+   
+    public void testCancelAuctionCancelled() {
+            au.setState(Cancelled.instance);
+            assertEquals("ERROR: auction already cancelled", au.cancelAuction(sellerTest));
+           
+    }
+   
+    public void testCancelAuctionOpen() {
+            au.setState(Open.instance);
+            assertEquals("ERROR: auction open", au.cancelAuction(sellerTest));
+           
+    }
+    public void testCancelAuctionClosed() {
+            au.setState(Closed.instance);
+            assertEquals("ERROR: auction closed", au.cancelAuction(sellerTest));
+    }
 
-	public void testClose() {
-		// TODO cf State
-	}
+    /*
+     * Test de Close
+     */
+    public void testClosePending() {
+            au.setState(Pending.instance);
+            try {
+                      au.close();
+                     
+                    } catch (Error e){
+                       assertEquals(e.getMessage(),"Cannot close a pending auction.");
+                    }
+    }
+   
+    public void testCloseCancelled() throws Throwable {
+            au.setState(Cancelled.instance);
+            try {
+                      au.close();
+   
+                    } catch (Error e){
+                       assertEquals(e.getMessage(),"Cannot close a cancelled auction.");
+                    }
+    }
+   
+    public void testCloseOpen() {
+            // A FAIRE
+    }
+   
+    public void testCloseClosed() {
+            au.setState(Closed.instance);
+            try {
+                      au.close();
+                     
+                    } catch (Error e){
+                       assertEquals(e.getMessage(),"Cannot close a closed auction.");
+                    }
+    }
 
-	public void testGetBidHistory() {
-		fail("Not yet implemented");
-	}
+    public void testGetBidHistory1() {
+            Bid b1=new BidImpl(ui,au,15);
+            Bid b2=new BidImpl(ui,au,25);
+    //      System.out.println(System.getProperty("line.separator").length());
+            assertEquals(au.getBidHistory(),System.getProperty("line.separator"));
+    }
+   
+    public void testGetBidHistory2() {
+            assertEquals(au.getBidHistory(),"");
+    }
 
-	/*
-	 * test getBids() avec bids vide
-	 */
-	public void testGetBidsEmpty() {
-		assertEquals(bids, au.getBids());
-	}
-	
-	/*
-	 * test getBids() avec bids non vide
-	 */
-	public void testGetBidsNotEmpty() {
-		BidImpl b = new BidImpl(ui, au, 50);
-		bids.add(b);
-		assertEquals(bids, au.getBids());
-	}
+    /*
+     * test getBids() avec bids vide
+     */
+    public void testGetBidsEmpty() {
+            assertEquals(bids, au.getBids());
+    }
+   
+    /*
+     * test getBids() avec bids non vide
+     */
+    public void testGetBidsNotEmpty() {
+            BidImpl b = new BidImpl(ui, au, 50);
+            bids.add(b);
+            assertEquals(bids, au.getBids());
+    }
 
-	public void testGetBulletinBoard() {
-		fail("Not yet implemented");
-	}
+    public void testGetBulletinBoard() {
+            assertTrue(au.getBulletinBoard() instanceof BulletinBoard);
+    }
 
-	public void testGetCurrentBid() {
-		fail("Not yet implemented");
-	}
+    /*
+     * Test de GetCurrentBid
+     */
+   
+    public void testGetCurrentBidPending() {
+            au.setState(Pending.instance);
+            assertEquals(au.getCurrentBid(),"ERROR: auction pending");
+    }
+   
+    public void testGetCurrentBidCancelled() {
+            au.setState(Cancelled.instance);
+            assertEquals(au.getCurrentBid(),"ERROR: auction cancelled");
+    }
+   
+    /*
+     * Test avec 2 éléments
+     */
+    public void testGetCurrentBidOpen1() {
+            au.setState(Open.instance);
+            Bid b1=new BidImpl(ui,au,15);
+            Bid b2=new BidImpl(ui,au, 20);
+            assertEquals("email 20", au.getCurrentBid());
+    }
+    /*
+     * Test avec 0 éléments
+     */
+    public void testGetCurrentBidOpen2() {
+            au.setState(Open.instance);
+            assertEquals("ERROR: no current bid", au.getCurrentBid());
+    }
+   
+    /*
+     * Test avec 2 éléments
+     */
+    public void testGetCurrentBidClosed1() {
+            au.setState(Closed.instance);
+            Bid b1=new BidImpl(ui,au,15);
+            Bid b2=new BidImpl(ui,au, 20);
+            assertEquals("email 20", au.getCurrentBid());
+    }
+    /*
+     * Test avec 0 éléments
+     */
+    public void testGetCurrentBidClosed2() {
+            //A corriger dans la méthode, appelle toString() sur null
+            au.setState(Closed.instance);
+            assertEquals("ERROR: no current bid", au.getCurrentBid());
+    }
 
 	public void testGetDescription() {
 		assertEquals("Description de l'auction",au.getDescription());
@@ -133,9 +258,39 @@ public class AuctionImplTest extends TestCase {
 		assertTrue(au.getState() instanceof AuctionState);
 	}
 
-	public void testJoin() {
-		fail("Not yet implemented");
-	}
+	/*
+     * Test de join
+     */
+   
+    public void testJoinPending() {
+            au.setState(Pending.instance);
+            assertEquals("ERROR: auction pending", au.join(ui));
+    }
+
+
+    public void testJoinCancelled() {
+            au.setState(Cancelled.instance);
+            assertEquals("ERROR: auction cancelled", au.join(ui));
+    }
+
+
+    public void testJoinOpen1() {
+            au.setState(Open.instance);
+            assertEquals("OK", au.join(ui));
+            assertTrue(au.getJoinedUsers().contains(ui));
+            assertTrue(ui.getJoinedAuctions().contains(au));
+    }
+
+    public void testJoinOpen2() {
+            au.setState(Open.instance);
+            au.join(ui);
+            assertEquals("ERROR: auction already joined", au.join(ui));            
+    }
+
+    public void testJoinClosed() {
+            au.setState(Closed.instance);
+            assertEquals("ERROR: auction closed", au.join(ui));
+    }
 
 	public void testLeave() {
 		fail("Not yet implemented");
@@ -149,16 +304,119 @@ public class AuctionImplTest extends TestCase {
 		fail("Not yet implemented");
 	}
 
-	public void testPlaceBid() {
-		fail("Not yet implemented");
+	public void testPlaceBidPending() {
+		au.setState(Pending.instance);
+		assertEquals("ERROR: auction pending", au.placeBid(ui, 50));
+	}
+	
+	public void testPlaceBidCancelled() {
+		au.setState(Cancelled.instance);
+		assertEquals("ERROR: auction cancelled", au.placeBid(ui, 50));
+	}
+	
+	public void testPlaceBidOpen1() {
+		au.setState(Open.instance);
+		assertEquals("ERROR: insufficient amount", au.placeBid(ui, 0));
+	}
+	
+	public void testPlaceBidOpen2() {
+		au.setState(Open.instance);
+		assertEquals("ERROR: insufficient free credit", au.placeBid(ui, 50));
+	}
+	
+	public void testPlaceBidOpen3() {
+		au.setState(Open.instance);
+		assertEquals("OK", au.placeBid(ui, 50));
+	}
+	
+	public void testPlaceBidClosed() {
+		au.setState(Closed.instance);
+		assertEquals("ERROR: auction closed", au.placeBid(ui, 50));
 	}
 
-	public void testPostMessage() {
-		fail("Not yet implemented");
+	/*
+	 * Test de postMessage pour le state Pending
+	 */
+	public void testPostMessagePending() {
+		au.setState(Pending.instance);
+		assertEquals("ERROR: auction pending", au.postMessage(seller, "newMess"));
+	}
+	
+	/*
+	 * Test de postMessage pour le state Cancelled
+	 */
+	public void testPostMessageCancelled() {
+		au.setState(Cancelled.instance);
+		assertEquals("ERROR: auction cancelled", au.postMessage(seller, "newMess"));
+	}
+	
+	/*
+	 * Test de postMessage pour le state Open
+	 * condition : (auction.getSeller()!=person && !(person instanceof Moderator) && !auction.getJoinedUsers().contains(person))
+	 */
+	public void testPostMessageOpen1() {
+		au.setState(Open.instance);
+		assertEquals("ERROR: you cannot post on this bulletin board", au.postMessage(sellerTest, "newMess"));
+	}
+	
+	/*
+	 * Test de postMessage pour le state Open
+	 * condition : Ne rentre pas dans le if
+	 */
+	public void testPostMessageOpen2() {
+		au.setState(Open.instance);
+		assertEquals("OK", au.postMessage(seller, "newMess"));
+	}
+	
+	/*
+	 * Test de postMessage pour le state Closed
+	 */
+	public void testPostMessageClosed() {
+		au.setState(Closed.instance);
+		assertEquals("ERROR: auction closed", au.postMessage(seller, "newMess"));
 	}
 
-	public void testSetDesc() {
-		fail("Not yet implemented");
+	/*
+	 * Test de setDesc pour le state Pending
+	 * condition : (auction.getSeller()!=person && !(person instanceof Moderator))
+	 */
+	public void testSetDescPending1() {
+		au.setState(Pending.instance);
+		assertEquals("ERROR: you cannot modify this auction", au.setDesc(sellerTest, "newDesc"));
+	}
+	
+	/*
+	 * Test de setDesc pour le state Pending
+	 * condition : Ne rentre pas dans le if
+	 */
+	public void testSetDescPending2() {
+		au.setState(Pending.instance);
+		assertEquals("OK", au.setDesc(seller, "newDesc"));
+		assertEquals("newDesc", au.getDescription());
+	}
+	
+	/*
+	 * Test de setDesc pour le state Cancelled
+	 */
+	public void testSetDescCancelled() {
+		au.setState(Cancelled.instance);
+		assertEquals("ERROR: auction cancelled", au.setDesc(seller, "newDesc"));
+	}
+	
+	/*
+	 * Test de setDesc pour le state Open
+	 */
+	public void testSetDescOpen() {
+		au.setState(Open.instance);
+		assertEquals("ERROR: auctions is open", au.setDesc(seller, "newDesc"));
+	}
+	
+	/*
+	 * Test de setDesc pour le state Closed
+	 */
+	public void testSetDescClosed() {
+		au.setState(Closed.instance);
+		assertEquals("ERROR: auction closed", au.setDesc(seller, "newDesc"));
 	}
 
 	public void testSetDescription() {
@@ -166,16 +424,114 @@ public class AuctionImplTest extends TestCase {
 		assertEquals("Modification description",au.getDescription());
 	}
 
-	public void testSetEndD() {
-		fail("Not yet implemented");
+	/*
+	 * Test de setEndD pour le state Pending
+	 * condition : (auction.getSeller()!=person && !(person instanceof Moderator))
+	 */
+	public void testSetEndDPending1() {
+		au.setState(Pending.instance);
+		assertEquals("ERROR: you cannot modify this auction", au.setEndD(sellerTest, 10));
+	}
+	
+	/*
+	 * Test de setEndD pour le state Pending
+	 * condition : (value<=auction.getStartDate())
+	 */
+	public void testSetEndDPending2() {
+		au.setState(Pending.instance);
+		assertEquals("ERROR: the end date must be greater than the start date", au.setEndD(seller, au.getStartDate()-1));
+	}
+	
+	/*
+	 * Test de setEndD pour le state Pending
+	 * condition : Ne rentre dans aucun if
+	 */
+	public void testSetEndDPending3() {
+		au.setState(Pending.instance);
+		int sd = au.getStartDate();
+		assertEquals("OK", au.setEndD(seller, au.getStartDate()+1));
+		assertEquals(sd+1, au.getEndDate());
+	}
+	
+	/*
+	 * Test de setEndD pour le state Cancelled
+	 */
+	public void testSetEndDCancelled() {
+		au.setState(Cancelled.instance);
+		assertEquals("ERROR: auction cancelled", au.setEndD(seller, 10));
+	}
+	
+	/*
+	 * Test de setEndD pour le state Open
+	 */
+	public void testSetEndDOpen() {
+		au.setState(Open.instance);
+		assertEquals("ERROR: auctions is open", au.setEndD(seller, 10));
+	}
+	
+	/*
+	 * Test de setEndD pour le state Closed
+	 */
+	public void testSetEndDClosed() {
+		au.setState(Closed.instance);
+		assertEquals("ERROR: auction closed", au.setEndD(seller, 10));
 	}
 
 	public void testSetEndDate() {
-		fail("Not yet implemented");
+		au.setEndDate(50);
+		assertEquals(50, au.getEndDate());
 	}
 
-	public void testSetMinBid() {
-		fail("Not yet implemented");
+	/*
+	 * Test de setMinBid pour le state Pending
+	 * condition : (auction.getSeller()!=person && !(person instanceof Moderator))
+	 */
+	public void testSetMinBidPending1() {
+		au.setState(Pending.instance);
+		assertEquals("ERROR: you cannot modify this auction", au.setMinBid(sellerTest, 10));
+	}
+	
+	/*
+	 * Test de setMinBid pour le state Pending
+	 * condition : (value<=0)
+	 */
+	public void testSetMinBidPending2() {
+		au.setState(Pending.instance);
+		assertEquals("ERROR: the minimum bid must be greater than 0", au.setMinBid(seller, -5));
+	}
+	
+	/*
+	 * Test de setMinBid pour le state Pending
+	 * condition : Ne rentre dans aucun if
+	 */
+	public void testSetMinBidPending3() {
+		au.setState(Pending.instance);
+		assertEquals("OK", au.setMinBid(seller, 10));
+		assertEquals(10, au.getMinimumBid());
+	}
+	
+	/*
+	 * Test de setMinBid pour le state Cancelled
+	 */
+	public void testSetMinBidCancelled() {
+		au.setState(Cancelled.instance);
+		assertEquals("ERROR: auction cancelled", au.setMinBid(seller, 10));
+	}
+	
+	/*
+	 * Test de setMinBid pour le state Open
+	 */
+	public void testSetMinBidOpen() {
+		au.setState(Open.instance);
+		assertEquals("ERROR: auctions is open", au.setMinBid(seller, 10));
+	}
+	
+	/*
+	 * Test de setMinBid pour le state Closed
+	 */
+	public void testSetMinBidClosed() {
+		au.setState(Closed.instance);
+		assertEquals("ERROR: auction closed", au.setMinBid(seller, 10));
 	}
 
 	public void testSetMinimumBid() {
