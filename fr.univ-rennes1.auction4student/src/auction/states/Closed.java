@@ -22,11 +22,19 @@ public class Closed implements AuctionState {
 		throw new Error("Cannot close a closed auction.");
 	}
 
-	 
+	/*
+	 * Modification du code : ajout d'un contrôle sur getMaxBid() au cas où retourne null
+	 * @see auction.AuctionState#getCurrentBid(auction.Auction)
+	 */
 	public String getCurrentBid(Auction auction) {
-		Bid b = auction.getMaxBid();
-		return b.toString();
+//		Bid b = auction.getMaxBid();
+//		return b.toString();
 		
+		Bid b = auction.getMaxBid();
+		if (b!=null)
+			return b.toString();
+		else
+			return "ERROR: no current bid";
 	}
 
 	 

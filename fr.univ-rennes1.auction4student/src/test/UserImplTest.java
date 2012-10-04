@@ -41,10 +41,8 @@ public class UserImplTest extends TestCase {
 		assertTrue("Test de getAccount()", u.getAccount() instanceof Account);
 	}
 	
-	
-	//A revoir 
 	public void testGetJoinedAuctions(){
-		assertEquals("Test de getAccount()", u.getJoinedAuctions().size(),0 );
+		assertEquals("Test de getAccount()", u.getJoinedAuctions().size(), 0);
 	}
 	
 	public void testGetBids(){

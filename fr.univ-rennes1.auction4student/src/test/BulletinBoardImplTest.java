@@ -74,11 +74,8 @@ public class BulletinBoardImplTest extends TestCase {
 	 * Test de getMess() avec aucun message dans la liste
 	 */
 	public void testGetMess3() {
-		System.out.println(b.getMessages().size());
 		b.delMessage(m, 1);
-		System.out.println(b.getMessages().size());
 		b.delMessage(m, 1);
-		System.out.println(b.getMessages().size());
 		b.delMessage(m, 1);
 		assertEquals(
 				"",

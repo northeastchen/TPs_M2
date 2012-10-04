@@ -84,13 +84,18 @@ public class Open implements AuctionState {
 
 	 
 	public String placeBid(Auction auction, UserImpl user, int amount) {
-		if(amount<auction.minimumAmount())
+		if (amount < auction.minimumAmount())
 			return "ERROR: insufficient amount";
-		if(amount>user.getAccount().getFreeCredit()+(auction.getMaxBid()!=null && auction.getMaxBid().getUser()==user ? auction.getMaxBid().getAmount() : 0 ))
+		if (amount > user.getAccount().getFreeCredit()
+				+ (auction.getMaxBid() != null
+						&& auction.getMaxBid().getUser() == user ? auction
+						.getMaxBid().getAmount() : 0))
 			return "ERROR: insufficient free credit";
-		new BidImpl(user,auction,amount);
-		for(User u : auction.getJoinedUsers())
-			ServerImpl.instance.send(u, "BID "+auction.getName()+" "+user.getEmail()+" "+amount);
+		new BidImpl(user, auction, amount);
+		for (User u : auction.getJoinedUsers())
+			ServerImpl.instance.send(u,
+					"BID " + auction.getName() + " " + user.getEmail() + " "
+							+ amount);
 		return "OK";
 	}
 

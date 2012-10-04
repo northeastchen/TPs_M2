@@ -8,6 +8,7 @@ import junit.framework.TestCase;
 import org.easymock.EasyMock;
 
 import auction.Auction;
+import auction.Bid;
 import auction.User;
 import auction.impl.AccountImpl;
 import auction.impl.AuctionImpl;
@@ -36,31 +37,7 @@ public class AccountImplTest extends TestCase {
 		u2=new UserImpl("firstname2","lastname2","email2","password2","address2");
 		
 		testA = new AccountImpl(u1);
-		
-		mockau1=EasyMock.createMock(AuctionImpl.class);
-		List<BidImpl> bids = new java.util.ArrayList<BidImpl>();
-		EasyMock.expect(mockau1.getBids()).andReturn(bids).anyTimes();
-		
-		mockau2=EasyMock.createMock(AuctionImpl.class);
-		List<BidImpl> bids2 = new java.util.ArrayList<BidImpl>();
-		EasyMock.expect(mockau2.getBids()).andReturn(bids2).anyTimes();
-
-		EasyMock.expect(mockau1.getMaxBid()).andReturn(!bids.isEmpty() ? bids.get(bids.size()-1) : null).anyTimes();
-		
-		//ServerImpl.instance.getAuctions().put(name,this);
-		
-		
-		EasyMock.replay(mockau1);
-		EasyMock.replay(mockau2);
-		
-		bid1=new BidImpl(u1, mockau1, 20);
-		bid2=new BidImpl(u1, mockau2, 10);
-		bid3=new BidImpl(u2, mockau2, 40);
-		
-		 
-		
-		l_auction=new ArrayList<Auction>();
-		
+		 	
 	}
 	
 	public void testAccountImpl() {
@@ -81,12 +58,43 @@ public class AccountImplTest extends TestCase {
 		assertEquals(-50, testA.getCredit());
 	}
 
+	/*
+	 * Test de getMaxBid
+	 */
+	
+	/*
+	 * Test condition a.getMaxBid()!=null && a.getMaxBid().getUser()==owner
+	 */
 	public void testGetFreeCredit1() {
-		System.out.println(testA.getFreeCredit());
+		Auction au =new AuctionImpl(u1, "Auction1","Description auc1", 12,20,5);
+		Auction au2 =new AuctionImpl(u1, "Auction2","Description auc2", 15,22,18);
+		
+		Bid bid1=new BidImpl(u1,au, 20);
+		Bid bid2=new BidImpl(u1,au, 25);
+		
+		assertEquals(25,testA.getFreeCredit());	
 	}
+	
+	public void testGetFreeCredit2() {
+		Auction au =new AuctionImpl(u1, "Auction1","Description auc1", 12,20,5);
+		Auction au2 =new AuctionImpl(u1, "Auction2","Description auc2", 15,22,18);
+		assertEquals(testA.getCredit(),testA.getFreeCredit());
+	}
+	
+	public void testGetFreeCredit3() {
+		Auction au =new AuctionImpl(u1, "Auction1","Description auc1", 12,20,5);
+		Auction au2 =new AuctionImpl(u1, "Auction2","Description auc2", 15,22,18);
+		
+		Bid bid1=new BidImpl(u2,au, 20);
+		Bid bid2=new BidImpl(u2,au, 25);
+		assertEquals(testA.getCredit(),testA.getFreeCredit());
+	}
+	
+	
 
 	public void testGetCredits() {	
-		fail("Not yet implemented");
+		testA.incCredit(12);
+		assertEquals("12 12",testA.getCredits());
 	}
 
 }
