@@ -1,0 +1,46 @@
+AORB_1:13:boolean_isPalindrome(java.lang.String):l / 2 => l * 2
+AORB_2:13:boolean_isPalindrome(java.lang.String):l / 2 => l % 2
+AORB_3:13:boolean_isPalindrome(java.lang.String):l / 2 => l + 2
+AORB_4:13:boolean_isPalindrome(java.lang.String):l / 2 => l - 2
+AORB_5:14:boolean_isPalindrome(java.lang.String):l - i => l * i
+AORB_6:14:boolean_isPalindrome(java.lang.String):l - i => l / i
+AORB_7:14:boolean_isPalindrome(java.lang.String):l - i => l % i
+AORB_8:14:boolean_isPalindrome(java.lang.String):l - i => l + i
+AORB_9:14:boolean_isPalindrome(java.lang.String):l - i - 1 => (l - i) * 1
+AORB_10:14:boolean_isPalindrome(java.lang.String):l - i - 1 => (l - i) / 1
+AORB_11:14:boolean_isPalindrome(java.lang.String):l - i - 1 => (l - i) % 1
+AORB_12:14:boolean_isPalindrome(java.lang.String):l - i - 1 => l - i + 1
+AORS_1:13:boolean_isPalindrome(java.lang.String):i++ => i--
+AOIS_1:13:boolean_isPalindrome(java.lang.String):i => ++i
+AOIS_2:13:boolean_isPalindrome(java.lang.String):i => --i
+AOIS_3:13:boolean_isPalindrome(java.lang.String):i => i++
+AOIS_4:13:boolean_isPalindrome(java.lang.String):i => i--
+AOIS_5:13:boolean_isPalindrome(java.lang.String):l => ++l
+AOIS_6:13:boolean_isPalindrome(java.lang.String):l => --l
+AOIS_7:13:boolean_isPalindrome(java.lang.String):l => l++
+AOIS_8:13:boolean_isPalindrome(java.lang.String):l => l--
+AOIS_9:14:boolean_isPalindrome(java.lang.String):i => ++i
+AOIS_10:14:boolean_isPalindrome(java.lang.String):i => --i
+AOIS_11:14:boolean_isPalindrome(java.lang.String):i => i++
+AOIS_12:14:boolean_isPalindrome(java.lang.String):i => i--
+AOIS_13:14:boolean_isPalindrome(java.lang.String):l => ++l
+AOIS_14:14:boolean_isPalindrome(java.lang.String):l => --l
+AOIS_15:14:boolean_isPalindrome(java.lang.String):l => l++
+AOIS_16:14:boolean_isPalindrome(java.lang.String):l => l--
+AOIS_17:14:boolean_isPalindrome(java.lang.String):i => ++i
+AOIS_18:14:boolean_isPalindrome(java.lang.String):i => --i
+AOIS_19:14:boolean_isPalindrome(java.lang.String):i => i++
+AOIS_20:14:boolean_isPalindrome(java.lang.String):i => i--
+ROR_1:14:boolean_isPalindrome(java.lang.String): s.charAt( i ) != s.charAt( l - i - 1 )  =>   s.charAt( i ) > s.charAt( l - i - 1 )
+ROR_2:14:boolean_isPalindrome(java.lang.String): s.charAt( i ) != s.charAt( l - i - 1 )  =>   s.charAt( i ) >= s.charAt( l - i - 1 )
+ROR_3:14:boolean_isPalindrome(java.lang.String): s.charAt( i ) != s.charAt( l - i - 1 )  =>   s.charAt( i ) < s.charAt( l - i - 1 )
+ROR_4:14:boolean_isPalindrome(java.lang.String): s.charAt( i ) != s.charAt( l - i - 1 )  =>   s.charAt( i ) <= s.charAt( l - i - 1 )
+ROR_5:14:boolean_isPalindrome(java.lang.String): s.charAt( i ) != s.charAt( l - i - 1 )  =>   s.charAt( i ) == s.charAt( l - i - 1 )
+COI_1:13:boolean_isPalindrome(java.lang.String): i < l / 2  =>  !(i < l / 2)
+COI_2:14:boolean_isPalindrome(java.lang.String): s.charAt( i ) != s.charAt( l - i - 1 )  =>  !(s.charAt( i ) != s.charAt( l - i - 1 ))
+LOI_1:13:boolean_isPalindrome(java.lang.String):i => ~i
+LOI_2:13:boolean_isPalindrome(java.lang.String):l => ~l
+LOI_3:13:boolean_isPalindrome(java.lang.String):i => ~i
+LOI_4:14:boolean_isPalindrome(java.lang.String):i => ~i
+LOI_5:14:boolean_isPalindrome(java.lang.String):l => ~l
+LOI_6:14:boolean_isPalindrome(java.lang.String):i => ~i
