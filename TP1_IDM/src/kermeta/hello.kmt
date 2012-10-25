@@ -1,0 +1,21 @@
+/* $Id:$ 
+ * Creation : October 25, 2012
+ * Licence  : EPL 
+ * Copyright:
+ * Authors  : 
+ *            11007285
+ */
+@mainClass "root_package::Main"
+@mainOperation "main"
+
+
+package root_package;
+
+
+require kermeta
+class Main
+{
+	operation main() : Void is do 
+		stdio.writeln("hello kermeta")
+	end
+}

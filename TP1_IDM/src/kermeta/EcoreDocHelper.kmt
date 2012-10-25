@@ -1,0 +1,101 @@
+/* $Id:$ 
+ * Creation : October 25, 2012
+ * Licence  : EPL 
+ * Copyright:
+ * Authors  : 
+ *            11007285
+ */
+@mainClass "root_package::EcoreDocHelper"
+@mainOperation "main"
+
+
+package root_package;
+
+require "platform:/resource/TP1_IDM/src/kermeta/helpers/EcoreUtil.kmt"
+require kermeta
+
+using EcoreUtil
+using ecore
+using kermeta::standard
+
+class EcoreDocHelper
+{
+	operation displayFlat(ePackage : EPackage) : String is do
+	
+		var ecoreU : EcoreUtil init EcoreUtil.new
+		var root : EPackage init ecoreU.loadModel("platform:/resource/TP1_IDM/model/spreadsheet.ecore")
+		result := ""
+		
+		from var i : Integer init 0
+		until i == root.eClassifiers.size
+		loop
+			
+			var c : EClass init EClass.new
+			if root.eClassifiers.at(i).isInstanceOf(EClass) then
+				c := root.eClassifiers.at(i).asType(EClass) 
+			
+				if c.eSuperTypes.size > 0 then
+					result := result + ("    ")
+				end
+							
+				result := result + c.name + "\n"
+			end
+			i := i+1
+		end
+	end
+	
+	operation displayShort(c : EClass) : String is do
+		result := ""
+		//var c : EClass init EClass.new
+		//if eClassifier.isInstanceOf(EClass) then
+			//c := eClassifier.asType(EClass)
+			
+			result := result + c.name + " :\n"
+			
+			// Attributs
+			from var i : Integer init 0
+			until i == c.eAttributes.size
+			loop
+				result := result + "attr" + c.eAttributes.at(i).name + 
+							" : " + c.eAttributes.at(i).eAttributeType.name + "\n"
+				i := i+1
+			end
+			
+			// Opérations
+//			from var i : Integer init 0
+//			until i == c.eOperations.size
+//			loop
+//				result := result + "op" + c.eOperations.at(i).name + "("
+//				from var j : Integer init 0
+//				until j == c.eOperations.at(i).eParameters.size
+//				loop
+//					result := result + c.eOperations.at(i).eParameters.at(j).name
+//								+ " : " + c.eOperations.at(i).eParameters.at(j).eType.name + ")\n"
+//					j := j+1
+//				end
+//				i := i+1
+//			end
+			
+		end
+	
+		//result := ""
+	//end
+	
+	operation displayFlatShort(ePackage : EPackage) : String is do
+	
+		
+	
+		result := ""
+	end
+
+
+	operation main() : Void is do 
+		var ecoreU : EcoreUtil init EcoreUtil.new
+		var root : EPackage init ecoreU.loadModel("platform:/resource/TP1_IDM/model/spreadsheet.ecore")
+		//var ecoreHelper : EcoreHelper init EcoreHelper.new
+		//stdio.writeln(displayFlat(root))
+		stdio.writeln(displayShort(root.eClassifiers.at(1).asType(EClass)))
+	end
+}
+
+

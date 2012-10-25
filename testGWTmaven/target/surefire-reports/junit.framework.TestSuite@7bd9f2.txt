@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+Test set: junit.framework.TestSuite@7bd9f2
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 36.182 sec <<< FAILURE!
+testGreetingService(fr.istic.client.GwtTestFirstGWT)  Time elapsed: 36.148 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Remote test failed at 148.60.1.162 / Mozilla/5.0 (X11; Linux i686; rv:12.0) Gecko/20100101 Firefox/12.0
+	at junit.framework.Assert.fail(Assert.java:197)
+	at junit.framework.Assert.assertTrue(Assert.java:188)
+	at junit.framework.Assert.assertTrue(Assert.java:183)
+	at fr.istic.client.GwtTestFirstGWT$1.onSuccess(GwtTestFirstGWT.java:55)
+	at fr.istic.client.GwtTestFirstGWT$1.onSuccess(GwtTestFirstGWT.java:1)
+	at com.google.gwt.user.client.rpc.impl.RequestCallbackAdapter.onResponseReceived(RequestCallbackAdapter.java:232)
+	at com.google.gwt.http.client.Request.fireOnResponseReceived(Request.java:287)
+	at com.google.gwt.http.client.RequestBuilder$1.onReadyStateChange(RequestBuilder.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.google.gwt.dev.shell.MethodAdaptor.invoke(MethodAdaptor.java:103)
+	at com.google.gwt.dev.shell.MethodDispatch.invoke(MethodDispatch.java:71)
+	at com.google.gwt.dev.shell.OophmSessionHandler.invoke(OophmSessionHandler.java:172)
+	at com.google.gwt.dev.shell.BrowserChannelServer.reactToMessagesWhileWaitingForReturn(BrowserChannelServer.java:337)
+	at com.google.gwt.dev.shell.BrowserChannelServer.invokeJavascript(BrowserChannelServer.java:218)
+	at com.google.gwt.dev.shell.ModuleSpaceOOPHM.doInvoke(ModuleSpaceOOPHM.java:136)
+	at com.google.gwt.dev.shell.ModuleSpace.invokeNative(ModuleSpace.java:561)
+	at com.google.gwt.dev.shell.ModuleSpace.invokeNativeObject(ModuleSpace.java:269)
+	at com.google.gwt.dev.shell.JavaScriptHost.invokeNativeObject(JavaScriptHost.java:91)
+	at com.google.gwt.core.client.impl.Impl.apply(Impl.java)
+	at com.google.gwt.core.client.impl.Impl.entry0(Impl.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.google.gwt.dev.shell.MethodAdaptor.invoke(MethodAdaptor.java:103)
+	at com.google.gwt.dev.shell.MethodDispatch.invoke(MethodDispatch.java:71)
+	at com.google.gwt.dev.shell.OophmSessionHandler.invoke(OophmSessionHandler.java:172)
+	at com.google.gwt.dev.shell.BrowserChannelServer.reactToMessages(BrowserChannelServer.java:292)
+	at com.google.gwt.dev.shell.BrowserChannelServer.processConnection(BrowserChannelServer.java:546)
+	at com.google.gwt.dev.shell.BrowserChannelServer.run(BrowserChannelServer.java:363)
+	at java.lang.Thread.run(Thread.java:662)
+
