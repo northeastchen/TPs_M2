@@ -1,0 +1,2 @@
+serviceClass: fr.istic.gwttest.client.GreetingService
+path: C785ABEFF3DF8B9FD0A69E242AFC8EC1.gwt.rpc
