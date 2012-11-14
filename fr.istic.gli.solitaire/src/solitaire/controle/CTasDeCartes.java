@@ -10,7 +10,7 @@ import solitaire.application.Carte;
 import solitaire.application.TasDeCartes;
 import solitaire.presentation.PTasDeCartes;
 
-public class CTasDeCartes extends TasDeCartes {
+public class CTasDeCartes extends TasDeCartes implements ITasDeCartes {
 
 	private PTasDeCartes p;
 
@@ -23,7 +23,9 @@ public class CTasDeCartes extends TasDeCartes {
 	public void empiler(Carte c) {
 		if (isEmpilable(c)) {
 			super.empiler(c);
-			((CCarte) c).setFaceVisible(true);
+			// Par défaut, une carte qu'on peut empiler sera face visible -->
+			// commenté pour tests
+			// ((CCarte) c).setFaceVisible(true);
 			p.empiler(((CCarte) c).getPresentation());
 		}
 	}
@@ -56,6 +58,7 @@ public class CTasDeCartes extends TasDeCartes {
 
 		CTasDeCartes pt = new CTasDeCartes("tas", new CUsine());
 		Carte pc1 = new CCarte(2, 2);
+		// pc1.setFaceVisible(false);
 		pt.empiler(pc1);
 		Carte pc2 = new CCarte(12, 4);
 		pt.empiler(pc2);

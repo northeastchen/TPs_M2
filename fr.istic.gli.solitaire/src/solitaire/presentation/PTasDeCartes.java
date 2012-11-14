@@ -9,18 +9,20 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 import solitaire.controle.CTasDeCartes;
+import solitaire.controle.CUsine;
+import solitaire.controle.ITasDeCartes;
 
 public class PTasDeCartes extends JPanel {
 
 	private int dx;
 	private int dy;
 
-	public PTasDeCartes(CTasDeCartes ct) {
-		this.setBackground(Color.green);
+	public PTasDeCartes(ITasDeCartes ct) {
+		this.setBackground(Color.PINK);
 		this.setLayout(null);
 		this.setPreferredSize(new Dimension(500, 300));
 
-		dx = 15;
+		dx = 0;
 		dy = 0;
 	}
 

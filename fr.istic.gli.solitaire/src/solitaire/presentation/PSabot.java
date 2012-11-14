@@ -3,6 +3,7 @@ package solitaire.presentation;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -10,11 +11,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
-import solitaire.application.TasDeCartes;
-import solitaire.application.Usine;
 import solitaire.controle.CCarte;
 import solitaire.controle.CSabot;
 import solitaire.controle.CTasDeCartes;
+import solitaire.controle.CUsine;
 
 public class PSabot extends JPanel {
 
@@ -34,21 +34,21 @@ public class PSabot extends JPanel {
 
 		rsl = new RetournerSabotListener();
 		rcl = new RetournerCarteListener();
-
+		this.c = c;
 		this.cachees = cachees;
 		this.visibles = visibles;
 
-		this.setPreferredSize(new Dimension(500, 300));
-		setLayout(new FlowLayout());
-		setBackground(Color.RED);
-		add(this.visibles);
-		add(this.cachees);
 		this.cachees.setDx(0);
 		this.cachees.setDy(0);
 
-		TasDeCartes g;
 		this.visibles.setDx(25);
 		this.visibles.setDy(0);
+
+		this.setPreferredSize(new Dimension(500, 300));
+		this.setLayout(new GridLayout(1, 2));
+		this.setBackground(Color.ORANGE);
+		this.add(this.cachees);
+		this.add(this.visibles);
 
 	}
 
@@ -146,13 +146,19 @@ public class PSabot extends JPanel {
 		f.setLayout(new FlowLayout()); // au lieu de BorderLayout par défaut
 		f.getContentPane().setBackground(new Color(143, 143, 195));
 
-		CTasDeCartes ctcach = new CTasDeCartes("tasCach", new Usine());
-		ctcach.empiler(new CCarte(10, 1));
-		ctcach.empiler(new CCarte(11, 2));
+		CTasDeCartes ctcach = new CTasDeCartes("tasCach", new CUsine());
 
-		CTasDeCartes ctvis = new CTasDeCartes("tasVis", new Usine());
-		ctvis.empiler(new CCarte(7, 3));
-		ctvis.empiler(new CCarte(2, 2));
+		CCarte cc1 = new CCarte(10, 1);
+		CCarte cc2 = new CCarte(8, 3);
+
+		ctcach.empiler(cc1);
+		ctcach.empiler(cc2);
+
+		CTasDeCartes ctvis = new CTasDeCartes("tasVis", new CUsine());
+		CCarte cc3 = new CCarte(7, 3);
+		cc3.setFaceVisible(true);
+
+		ctvis.empiler(cc3);
 
 		// PSabot ps = new PSabot(new CSabot(), cachees, visibles);
 		PSabot ps = new PSabot(new CSabot("sabot", new CUsine()),
