@@ -67,7 +67,7 @@
   <children xmi:type="notation:Node" xmi:id="_Dk9egB5sEeKnvOa-IlgA9A" type="1001">
     <children xmi:type="notation:Node" xmi:id="_Dk-FkB5sEeKnvOa-IlgA9A" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_Dk-FkR5sEeKnvOa-IlgA9A" type="5001">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_Dk-Fkh5sEeKnvOa-IlgA9A"/>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Dk-Fkh5sEeKnvOa-IlgA9A" collapsed="true"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_Dk-Fkx5sEeKnvOa-IlgA9A"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Dk-FlB5sEeKnvOa-IlgA9A"/>
     </children>

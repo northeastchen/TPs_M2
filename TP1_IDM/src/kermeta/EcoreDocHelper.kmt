@@ -20,10 +20,11 @@ using kermeta::standard
 
 class EcoreDocHelper
 {
-	operation displayFlat(ePackage : EPackage) : String is do
+	/*
+	TP1
+	*/
+	operation displayFlat(root : EPackage) : String is do
 	
-		var ecoreU : EcoreUtil init EcoreUtil.new
-		var root : EPackage init ecoreU.loadModel("platform:/resource/TP1_IDM/model/spreadsheet.ecore")
 		result := ""
 		
 		from var i : Integer init 0
@@ -44,57 +45,252 @@ class EcoreDocHelper
 		end
 	end
 	
+	/*
+	TP1
+	*/
 	operation displayShort(c : EClass) : String is do
 		result := ""
 		//var c : EClass init EClass.new
 		//if eClassifier.isInstanceOf(EClass) then
 			//c := eClassifier.asType(EClass)
 			
-			result := result + c.name + " :\n"
+			result := result + "Classe " + c.name + " :\n"
 			
 			// Attributs
 			from var i : Integer init 0
-			until i == c.eAttributes.size
+			until i == c.eStructuralFeatures.size
 			loop
-				result := result + "attr" + c.eAttributes.at(i).name + 
-							" : " + c.eAttributes.at(i).eAttributeType.name + "\n"
+				if(c.eStructuralFeatures.at(i).eType != void) then
+					result := result + "Attribut : " + c.eStructuralFeatures.at(i).name + 
+								" : " + c.eStructuralFeatures.at(i).eType.name + "\n"
+				else
+					result := result + "Attribut : " + c.eStructuralFeatures.at(i).name
+				end
 				i := i+1
 			end
 			
 			// Opérations
-//			from var i : Integer init 0
-//			until i == c.eOperations.size
-//			loop
-//				result := result + "op" + c.eOperations.at(i).name + "("
-//				from var j : Integer init 0
-//				until j == c.eOperations.at(i).eParameters.size
-//				loop
-//					result := result + c.eOperations.at(i).eParameters.at(j).name
-//								+ " : " + c.eOperations.at(i).eParameters.at(j).eType.name + ")\n"
-//					j := j+1
-//				end
-//				i := i+1
-//			end
+			from var i : Integer init 0
+			until i == c.eOperations.size
+			loop
+				result := result + "Operation : " + c.eOperations.at(i).name + "("
+				from var j : Integer init 0
+				until j == c.eOperations.at(i).eParameters.size
+				loop
+					if(c.eOperations.at(i).eParameters.at(j).eType != void) then
+						result := result + c.eOperations.at(i).eParameters.at(j).name
+									+ " : " + c.eOperations.at(i).eParameters.at(j).eType.name
+					else
+						result := result + c.eOperations.at(i).eParameters.at(j).name
+					end
+					if(j < c.eOperations.at(i).eParameters.size-1) then
+						result := result + ", "
+					end
+					j := j+1
+				end
+				result := result + ")"
+				if(c.eOperations.at(i).eType != void) then
+					result := result + " : " + c.eOperations.at(i).eType.name + "\n"
+				else
+					result := result + " : Void\n"
+				end
+				i := i+1
+			end
 			
 		end
 	
 		//result := ""
 	//end
 	
+	/*
+	TP1
+	*/
 	operation displayFlatShort(ePackage : EPackage) : String is do
 	
-		
-	
 		result := ""
+		
+		from var i : Integer init 0
+		until i == ePackage.eClassifiers.size
+		loop
+			
+			var c : EClass init EClass.new
+			if ePackage.eClassifiers.at(i).isInstanceOf(EClass) then
+				c := ePackage.eClassifiers.at(i).asType(EClass) 
+				result := result + displayShort(c)
+			end
+			i := i+1
+		end
+	
 	end
+	
+	/**************************************/
+	
+	/*
+	TP2
+	*/
+	operation addAttributeToClass(eClass : EClass, newAttr : EAttribute) is do
+		eClass.eStructuralFeatures.add(newAttr)
+	end
+	
+	/*
+	TP2
+	*/
+	operation addDataTypeToPackage(ePackage : EPackage, newDT : EDataType) is do
+		ePackage.eClassifiers.add(newDT)
+	end
+	
+	/*
+	TP2
+	*/
+	operation addOperationToClass(eClass : EClass, newOp : EOperation) is do
+		eClass.eOperations.add(newOp)
+	end
+	
+	/*
+	Visitor
+	*/
+	operation addPackageToAnother(newPackage : EPackage, bigPackage : EPackage) is do
+		bigPackage.eSubpackages.add(newPackage)
+	end
+	
+	operation addEClassToPackage(eClass : EClass, pack : EPackage) is do
+		pack.eClassifiers.add(eClass)
+	end
+	
 
-
+	/*
+	Main
+	*/
 	operation main() : Void is do 
 		var ecoreU : EcoreUtil init EcoreUtil.new
 		var root : EPackage init ecoreU.loadModel("platform:/resource/TP1_IDM/model/spreadsheet.ecore")
+		var rootPackage : EPackage init root.eSubpackages.at(0)
+		/*
+		TP1
+		*/
 		//var ecoreHelper : EcoreHelper init EcoreHelper.new
 		//stdio.writeln(displayFlat(root))
-		stdio.writeln(displayShort(root.eClassifiers.at(1).asType(EClass)))
+		//stdio.writeln(displayShort(root.eClassifiers.at(3).asType(EClass)))
+		
+		/*
+		TP2
+		*/
+		
+		// Add DataType String
+		var newDT : EDataType init EDataType.new
+		newDT.name := "Integer"
+		newDT.instanceClassName := "java.lang.Integer"
+		newDT.serializable := true
+		addDataTypeToPackage(rootPackage, newDT)
+		
+		// Class
+		var classValue : EClass init rootPackage.eClassifiers.at(3).asType(EClass)
+		
+		// Add Attribute value
+		var newAttr : EAttribute init EAttribute.new
+		newAttr.name := "val"
+		newAttr.eType := newDT
+		addAttributeToClass(classValue, newAttr)
+		stdio.writeln("Add Attribute value : \n" + displayShort(classValue))
+		
+		// Add Operation getValue
+		var newOpGet : EOperation init EOperation.new
+		newOpGet.name := "getValue"
+		newOpGet.eType := newDT
+		addOperationToClass(classValue, newOpGet)
+		stdio.writeln("Add Operation getValue : \n" + displayShort(classValue))
+		
+		// Add Operation setValue
+		var newOpSet : EOperation init EOperation.new
+		var paramSet : EParameter init EParameter.new
+		paramSet.eType := newDT
+		newOpSet.eParameters.add(paramSet)
+		newOpSet.name := "setValue"
+		newOpSet.eType := void
+		addOperationToClass(classValue, newOpSet)
+		stdio.writeln("Add Operation setValue : \n" + displayShort(classValue))
+		
+		// Saving of the changements
+		//ecoreU.saveModel(rootPackage, "platform:/resource/TP1_IDM/model/spreadsheet_modified.ecore") 
+		
+		// Visitor package
+		var packVisitor : EPackage init EPackage.new
+		packVisitor.name := "visitors"
+		
+		// Class visitor
+		var visitor : EClass init EClass.new
+		//visitor.abstract := true
+		visitor.name := "Visitor"
+		
+		// interface visitable
+		var visitable : EClass init EClass.new
+		visitable.name := "Visitable"
+		visitable.interface := true
+
+		// Operations on Visitable
+		var accept : EOperation init EOperation.new
+		accept.name := "accept"
+		var paramAccept : EParameter init EParameter.new
+		paramAccept.name := "v"
+		paramAccept.eType := visitor
+		accept.eParameters.add(paramAccept)
+		addOperationToClass(visitable, accept)
+		
+		// Operations on Visitor
+		var visit : EOperation init EOperation.new
+		visit.name := "visit"
+		var paramVisit : EParameter init EParameter.new
+		paramVisit.name := "v"
+		paramVisit.eType := visitable
+		visit.eParameters.add(paramVisit)
+		addOperationToClass(visitor, visit)
+		
+		// Loop for each class
+		rootPackage.eClassifiers.each{e | do
+			if(e.isInstanceOf(EClass)) then
+				// Add operations visit to each classes
+				var acceptTmp : EOperation init EOperation.new
+				acceptTmp.name := "accept"
+				var paramAcceptTmp : EParameter init EParameter.new
+				paramAcceptTmp.name := "v"
+				paramAcceptTmp.eType := visitor
+				acceptTmp.eParameters.add(paramAcceptTmp)
+				
+				addOperationToClass(e.asType(EClass), acceptTmp)
+				
+				if(e.name.equals("Expression") or e.name.equals("Cell")) then	
+					e.asType(EClass).eSuperTypes.add(visitable)
+				end
+				
+				// Add method visitFoo to Visitor
+				var newOp : EOperation init EOperation.new
+				newOp.name := "visit" + e.name
+				var newParam : EParameter init EParameter.new
+				newParam.name := "v"
+				newParam.eType := e
+				newOp.eParameters.add(newParam)
+				
+				addOperationToClass(visitor, newOp)
+			end
+		end }
+		
+		// Concrete visitor
+		var concreteVisitor : EClass init EClass.new
+		concreteVisitor.name := "ConcreteVisitor"
+		concreteVisitor.eSuperTypes.add(visitor)
+		
+		// Add packages
+		addEClassToPackage(visitor, packVisitor)
+		addEClassToPackage(visitable, packVisitor)
+		addEClassToPackage(concreteVisitor, packVisitor)
+		addPackageToAnother(packVisitor,root)
+		
+		// Display informations
+		stdio.writeln("Package root : \n" + displayFlatShort(rootPackage))
+		stdio.writeln("Package visitors : \n" + displayFlatShort(packVisitor))
+		
+		// Saving with visitor
+		ecoreU.saveModel(root, "platform:/resource/TP1_IDM/model/spreadsheet_visitor.ecore") 
 	end
 }
 
