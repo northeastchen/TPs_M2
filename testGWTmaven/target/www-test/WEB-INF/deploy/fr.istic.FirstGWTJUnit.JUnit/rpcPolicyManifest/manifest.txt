@@ -1,0 +1,2 @@
+# Module fr.istic.FirstGWTJUnit.JUnit
+# RPC service class, partial path of RPC policy file

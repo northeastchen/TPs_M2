@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="1" time="32.238" errors="0" skipped="0" tests="1" name="junit.framework.TestSuite@121cc40">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/opt/sun-jdk-1.6.0.31/jre/lib/i386"/>
+    <property name="java.vm.version" value="20.6-b01"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="surefire.reports" value="/ws/11007285/TPs_M2/testGWTmaven/target/surefire-reports"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/ws/11007285/TPs_M2/testGWTmaven"/>
+    <property name="java.runtime.version" value="1.6.0_31-b04"/>
+    <property name="org.mortbay.log.class" value="com.google.gwt.dev.shell.jetty.JettyNullLogger"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/opt/sun-jdk-1.6.0.31/jre/lib/endorsed"/>
+    <property name="os.arch" value="i386"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.jnu.encoding" value="ISO-8859-15"/>
+    <property name="java.library.path" value="/opt/sun-jdk-1.6.0.31/jre/lib/i386/server:/opt/sun-jdk-1.6.0.31/jre/lib/i386:/opt/sun-jdk-1.6.0.31/jre/../lib/i386:/opt/sun-jdk-1.6.0.31/jre/lib/i386/client:/opt/sun-jdk-1.6.0.31/jre/lib/i386:/usr/X11R6/lib:/usr/local/lib:/usr/local/ns-allinone-2.34/otcl-1.13:/usr/local/ns-allinone-2.34/lib:/usr/java/packages/lib/i386:/lib:/usr/lib"/>
+    <property name="gwt.args" value="-out target/www-test -runStyle Manual:1 "/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot Tiered Compilers"/>
+    <property name="os.version" value="3.2.1-gentoo-r2"/>
+    <property name="user.home" value="/private/student/5/85/11007285"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="ISO-8859-15"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="org.mortbay.xml.XmlParser.Validating" value="false"/>
+    <property name="user.name" value="11007285"/>
+    <property name="java.class.path" value="/ws/11007285/TPs_M2/testGWTmaven/src/main/java:/ws/11007285/TPs_M2/testGWTmaven/target/generated-sources/gwt:/ws/11007285/TPs_M2/testGWTmaven/src/main/resources:/ws/11007285/TPs_M2/testGWTmaven/target/testGWTmaven-1.0-SNAPSHOT/WEB-INF/classes:/ws/11007285/TPs_M2/testGWTmaven/src/test/java:/ws/11007285/TPs_M2/testGWTmaven/src/test/resources:/ws/11007285/TPs_M2/testGWTmaven/target/test-classes:/private/student/5/85/11007285/.m2/repository/com/google/gwt/gwt-servlet/2.4.0/gwt-servlet-2.4.0.jar:/private/student/5/85/11007285/.m2/repository/com/google/gwt/gwt-user/2.4.0/gwt-user-2.4.0.jar:/private/student/5/85/11007285/.m2/repository/junit/junit/4.7/junit-4.7.jar:/private/student/5/85/11007285/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar:/private/student/5/85/11007285/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar:/private/student/5/85/11007285/.m2/repository/com/smartgwt/smartgwt/3.0/smartgwt-3.0.jar:/private/student/5/85/11007285/.m2/repository/org/codehaus/mojo/gwt-maven-plugin/2.4.0/gwt-maven-plugin-2.4.0.jar:/private/student/5/85/11007285/.m2/repository/org/apache/maven/surefire/surefire-api/2.4.3/surefire-api-2.4.3.jar:/private/student/5/85/11007285/.m2/repository/com/google/gwt/gwt-dev/2.4.0/gwt-dev-2.4.0.jar"/>
+    <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="/opt/sun-jdk-1.6.0.31/jre"/>
+    <property name="sun.java.command" value="org.codehaus.mojo.gwt.test.MavenTestRunner fr.istic.client.GwtTestFirstGWT"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="fr"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_31"/>
+    <property name="java.ext.dirs" value="/opt/sun-jdk-1.6.0.31/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.boot.class.path" value="/opt/sun-jdk-1.6.0.31/jre/lib/resources.jar:/opt/sun-jdk-1.6.0.31/jre/lib/rt.jar:/opt/sun-jdk-1.6.0.31/jre/lib/sunrsasign.jar:/opt/sun-jdk-1.6.0.31/jre/lib/jsse.jar:/opt/sun-jdk-1.6.0.31/jre/lib/jce.jar:/opt/sun-jdk-1.6.0.31/jre/lib/charsets.jar:/opt/sun-jdk-1.6.0.31/jre/lib/modules/jdk.boot.jar:/opt/sun-jdk-1.6.0.31/jre/classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="32.22" classname="fr.istic.client.GwtTestFirstGWT" name="testGreetingService">
+    <failure message="Remote test failed at 148.60.1.162 / Mozilla/5.0 (X11; Linux i686; rv:12.0) Gecko/20100101 Firefox/12.0" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Remote test failed at 148.60.1.162 / Mozilla/5.0 (X11; Linux i686; rv:12.0) Gecko/20100101 Firefox/12.0
+	at junit.framework.Assert.fail(Assert.java:197)
+	at junit.framework.Assert.assertTrue(Assert.java:188)
+	at junit.framework.Assert.assertTrue(Assert.java:183)
+	at fr.istic.client.GwtTestFirstGWT$1.onSuccess(GwtTestFirstGWT.java:55)
+	at fr.istic.client.GwtTestFirstGWT$1.onSuccess(GwtTestFirstGWT.java:1)
+	at com.google.gwt.user.client.rpc.impl.RequestCallbackAdapter.onResponseReceived(RequestCallbackAdapter.java:232)
+	at com.google.gwt.http.client.Request.fireOnResponseReceived(Request.java:287)
+	at com.google.gwt.http.client.RequestBuilder$1.onReadyStateChange(RequestBuilder.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.google.gwt.dev.shell.MethodAdaptor.invoke(MethodAdaptor.java:103)
+	at com.google.gwt.dev.shell.MethodDispatch.invoke(MethodDispatch.java:71)
+	at com.google.gwt.dev.shell.OophmSessionHandler.invoke(OophmSessionHandler.java:172)
+	at com.google.gwt.dev.shell.BrowserChannelServer.reactToMessagesWhileWaitingForReturn(BrowserChannelServer.java:337)
+	at com.google.gwt.dev.shell.BrowserChannelServer.invokeJavascript(BrowserChannelServer.java:218)
+	at com.google.gwt.dev.shell.ModuleSpaceOOPHM.doInvoke(ModuleSpaceOOPHM.java:136)
+	at com.google.gwt.dev.shell.ModuleSpace.invokeNative(ModuleSpace.java:561)
+	at com.google.gwt.dev.shell.ModuleSpace.invokeNativeObject(ModuleSpace.java:269)
+	at com.google.gwt.dev.shell.JavaScriptHost.invokeNativeObject(JavaScriptHost.java:91)
+	at com.google.gwt.core.client.impl.Impl.apply(Impl.java)
+	at com.google.gwt.core.client.impl.Impl.entry0(Impl.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.google.gwt.dev.shell.MethodAdaptor.invoke(MethodAdaptor.java:103)
+	at com.google.gwt.dev.shell.MethodDispatch.invoke(MethodDispatch.java:71)
+	at com.google.gwt.dev.shell.OophmSessionHandler.invoke(OophmSessionHandler.java:172)
+	at com.google.gwt.dev.shell.BrowserChannelServer.reactToMessages(BrowserChannelServer.java:292)
+	at com.google.gwt.dev.shell.BrowserChannelServer.processConnection(BrowserChannelServer.java:546)
+	at com.google.gwt.dev.shell.BrowserChannelServer.run(BrowserChannelServer.java:363)
+	at java.lang.Thread.run(Thread.java:662)
+</failure>
+    <system-out>Please navigate your browser to this URL:
+http://148.60.1.162:55658/fr.istic.FirstGWTJUnit.JUnit/junit-standards.html?gwt.codesvr=148.60.1.162:43855
+1 - 148.60.1.162 / Mozilla/5.0 (X11; Linux i686; rv:12.0) Gecko/20100101 Firefox/12.0
+</system-out>
+  </testcase>
+</testsuite>
